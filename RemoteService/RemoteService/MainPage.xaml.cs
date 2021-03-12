@@ -54,11 +54,7 @@ namespace RemoteService
 
             var location = await service.GetLocation();
 
-            Device.BeginInvokeOnMainThread(()=>
-            {
-                var loc = location;
-                UserDialogs.Instance.Toast(loc, TimeSpan.FromSeconds(3));
-            });
+            UserDialogs.Instance.Toast(location, TimeSpan.FromSeconds(3));
         }
 
         private void UnbindService(object sender, EventArgs e)
