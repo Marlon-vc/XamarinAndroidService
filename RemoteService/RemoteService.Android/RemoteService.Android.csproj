@@ -75,7 +75,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\SecurityServiceBinder.cs" />
     <Compile Include="Services\SecurityService.cs" />
     <Compile Include="Services\SecurityServiceConnection.cs" />
     <Compile Include="Services\ServiceHandler.cs" />
