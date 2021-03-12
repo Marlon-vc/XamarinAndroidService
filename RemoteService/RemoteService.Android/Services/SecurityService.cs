@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V4.App;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
@@ -99,10 +100,11 @@ namespace RemoteService.Droid.Services
 
         private Notification GetNotification()
         {
-            return new Notification.Builder(this, ChannelId)
-                .SetSmallIcon(Resource.Drawable.notification_tile_bg)
+            return new NotificationCompat.Builder(this, ChannelId)
+                .SetSmallIcon(Resource.Drawable.shield1)
+                
                 .SetContentTitle("Security Service")
-                .SetContentText("Service is running")
+                .SetContentText("Rest assured, service is running")
                 .SetOngoing(true)
                 .Build();
         }
