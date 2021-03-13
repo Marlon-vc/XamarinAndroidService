@@ -9,5 +9,6 @@ namespace RemoteService.Helpers
         public const string TAG = "SECURITY_XERA";
 
         public const int LocationRequest = 0;
+        public const int AlertRequest = 1;
     }
 }
