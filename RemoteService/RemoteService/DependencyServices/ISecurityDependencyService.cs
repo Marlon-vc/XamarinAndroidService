@@ -11,5 +11,7 @@ namespace RemoteService.DependencyServices
         void UnbindService();
         Task<string> GetLocation();
         void OnLocation(string location);
+        void StopService();
+        void SendAlert();
     }
 }

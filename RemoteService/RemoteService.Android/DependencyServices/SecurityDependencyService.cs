@@ -68,6 +68,29 @@ namespace RemoteService.Droid.DependencyServices
             LocationTcs.SetResult(location);
         }
 
+        public void SendAlert()
+        {
+            if (Connection != null && Connection.IsConnected)
+            {
+                var msg = Message.Obtain(null, Constants.AlertRequest);
+
+                try
+                {
+                    Connection.Messenger.Send(msg);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+        }
+
+        public void StopService()
+        {
+            var intent = new Intent(Android.App.Application.Context, typeof(SecurityService));
+            MainActivity.Instance.StopService(intent);
+        }
+
         public void UnbindService()
         {
             MainActivity.Instance.DisconnectService();
