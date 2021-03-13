@@ -33,6 +33,9 @@ namespace RemoteService.Droid.Services
                 case Constants.LocationRequest:
                     GetLocation(code, msg.ReplyTo).ConfigureAwait(false);
                     break;
+                case Constants.AlertRequest:
+                    service.SendAlert();
+                    break;
             }
         }
 
