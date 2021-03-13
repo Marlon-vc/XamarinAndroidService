@@ -62,5 +62,17 @@ namespace RemoteService
             var service = DependencyService.Get<ISecurityDependencyService>();
             service.UnbindService();
         }
+
+        private void StopService(object sender, EventArgs e)
+        {
+            var service = DependencyService.Get<ISecurityDependencyService>();
+            service.StopService();
+        }
+
+        private void SendAlert(object sender, EventArgs e)
+        {
+            var service = DependencyService.Get<ISecurityDependencyService>();
+            service.SendAlert();
+        }
     }
 }

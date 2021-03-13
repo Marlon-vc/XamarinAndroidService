@@ -23,5 +23,17 @@
                 HeightRequest="80"
                 CornerRadius="5"/>
 
+        <Button Text="Stop service"
+                Clicked="StopService"
+                VerticalOptions="End"
+                HeightRequest="80"
+                CornerRadius="5"/>
+
+        <Button Text="Send Test Alert"
+                Clicked="SendAlert"
+                VerticalOptions="End"
+                HeightRequest="80"
+                CornerRadius="5"/>
+
     </StackLayout>
 </ContentPage>
